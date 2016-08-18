@@ -1,7 +1,38 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>remindr - demo</title>
+<title>fluidWidth - demo</title>
 <style>
+/* Souce:
+
+@import "";
+
+h1 {
+	@include fluidFontSize(18px, 64px, 640px, 1280px);
+}
+
+h2 {
+	@include fluidFontSize(16px, 54px, 640px, 1280px);
+}
+
+p {
+	@include fluidFontSize(14px, 48px, 640px, 1280px);
+}
+
+div {
+	outline: 1px solid #000;
+	width: 100px;
+	height: 100px;
+	@media only screen and (min-width: 640px) {
+		width: fluidWidth(100px, 500px, 640px, 1280px);
+		height: fluidWidth(100px, 500px, 640px, 1280px);
+	}
+	@media only screen and (min-width: 1280px) {
+		font-size: 500px;
+	}
+	@include fluidFontSize(16px, 48px, 640px, 1280px);
+}
+
+*/
 h1 {
   font-size: 18px; }
   @media only screen and (min-width: 640px) {
