@@ -1,0 +1,15 @@
+{
+  "name": "fluidWidth",
+  "version": "1.0.0",
+  "description": "Optimized SCSS functions and mixins for fluid sizes.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanoio/fluidWidth.git"
+  },
+  "author": "Stefano Peloso",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/stefanoio/fluidWidth/issues"
+  },
+  "homepage": "https://github.com/stefanoio/fluidWidth#readme"
+}

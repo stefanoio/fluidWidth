@@ -1,0 +1,18 @@
+@function fluidWidth($min, $max, $minWidth, $maxWidth) {
+	$multiplier: ($max - $min) / ($maxWidth - $minWidth);
+	$vwMultiplier: $multiplier / ($multiplier * 0 + 1) * 100vw;
+	@return calc(#{($min - $multiplier * $minWidth) + " + " + $vwMultiplier});
+}
+
+@mixin fluidFontSize($min, $max, $minWidth, $maxWidth) {
+	font-size: $min;
+
+	@media only screen and (min-width: $minWidth) {
+		font-size: $min + ($max - $min) / 2; // fallback to halfway between min and max
+		font-size: fluidWidth($min, $max, $minWidth, $maxWidth);
+	}
+
+	@media only screen and (min-width: $maxWidth) {
+		font-size: $max;
+	}
+}
