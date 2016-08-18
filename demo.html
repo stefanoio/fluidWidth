@@ -6,6 +6,12 @@
 
 @import "";
 
+h1,
+h2,
+p {
+	max-width: 100vw; // hack to trigger actual fluid rendering inside webkit
+}
+
 h1 {
 	@include fluidFontSize(18px, 64px, 640px, 1280px);
 }
@@ -33,6 +39,9 @@ div {
 }
 
 */
+h1, h2, p {
+	max-width: 100vw;
+}
 h1 {
   font-size: 18px; }
   @media only screen and (min-width: 640px) {
