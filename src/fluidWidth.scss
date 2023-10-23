@@ -1,6 +1,8 @@
+@use 'sass:math';
+
 @function fluidWidth($min, $max, $minWidth, $maxWidth) {
-	$multiplier: ($max - $min) / ($maxWidth - $minWidth);
-	$vwMultiplier: $multiplier / ($multiplier * 0 + 1) * 100vw;
+	$multiplier: math.div($max - $min, $maxWidth - $minWidth);
+	$vwMultiplier: math.div($multiplier, $multiplier * 0 + 1) * 100vw;
 	@return calc(#{($min - $multiplier * $minWidth) + " + " + $vwMultiplier});
 }
 
@@ -8,7 +10,7 @@
 	font-size: $min;
 
 	@media only screen and (min-width: $minWidth) {
-		font-size: $min + ($max - $min) / 2; // fallback to halfway between min and max
+		font-size: $min + ($max - $min) * 0.5; // fallback to halfway between min and max
 		font-size: fluidWidth($min, $max, $minWidth, $maxWidth);
 	}
 
